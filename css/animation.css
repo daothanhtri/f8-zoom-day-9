@@ -1,25 +1,28 @@
 .container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   height: 100vh;
   padding-top: 60px;
-  background-color: #000;
+  background-image: linear-gradient(to left, #fff, #000 60%);
 }
 
-.animation-wrapper {
+.egg-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 600px;
+  max-width: 700px;
   height: 300px;
   margin: auto;
-  border-radius: 49%;
-  background-color: #fff;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #fff 60%, #000);
 }
 
-.dots {
+.pulse {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 480px;
+  width: 500px;
   height: 200px;
 }
 
@@ -29,7 +32,7 @@
   height: 30px;
 }
 
-.dots .dot::before {
+.pulse .dot::before {
   position: absolute;
   top: 0;
   content: "";
@@ -39,11 +42,11 @@
   border-radius: 50%;
   opacity: 0;
   transform: translateY(0);
-  animation: pulseup linear 3s infinite;
+  animation: pulseup linear 1.8s infinite;
   animation-delay: calc(var(--i) * 0.3s);
 }
 
-.dots .dot::after {
+.pulse .dot::after {
   position: absolute;
   top: 0;
   content: "";
@@ -51,26 +54,34 @@
   height: 100%;
   background: #000;
   border-radius: 50%;
-  animation: pulsedown linear 3s infinite;
+  animation: pulsedown linear 1.8s infinite;
   animation-delay: calc(var(--i) * 0.3s);
 }
 
 @keyframes pulseup {
   0% {
-    transform: scale(0.3);
-    opacity: 0.3;
+    transform: scale(0.25);
+    opacity: 0.25;
   }
   25% {
-    transform: translateY(-20px) scale(0.4);
-    opacity: 0.3;
+    transform: translateY(-25px) scale(0.25);
+    opacity: 0.25;
+  }
+  35% {
+    transform: translateY(-35px) scale(0.35);
+    opacity: 0.35;
   }
   50% {
-    transform: translateY(-50px) scale(0.55);
-    opacity: 0.7;
+    transform: translateY(-50px) scale(0.5);
+    opacity: 0.5;
+  }
+  65% {
+    transform: translateY(-35px) scale(0.65);
+    opacity: 0.65;
   }
   75% {
-    transform: translateY(-20px) scale(0.75);
-    opacity: 1;
+    transform: translateY(-25px) scale(0.75);
+    opacity: 0.75;
   }
   100% {
     transform: scale(1);
@@ -83,19 +94,27 @@
     opacity: 1;
   }
   25% {
-    transform: translateY(20px) scale(0.75);
-    opacity: 1;
+    transform: translateY(25px) scale(0.75);
+    opacity: 0.75;
+  }
+  35% {
+    transform: translateY(35px) scale(0.65);
+    opacity: 0.65;
   }
   50% {
-    transform: translateY(50px) scale(0.55);
-    opacity: 0.7;
-  }
-  75% {
-    transform: translateY(20px) scale(0.4);
+    transform: translateY(50px) scale(0.5);
     opacity: 0.5;
   }
+  65% {
+    transform: translateY(35px) scale(0.35);
+    opacity: 0.35;
+  }
+  75% {
+    transform: translateY(25px) scale(0.25);
+    opacity: 0.25;
+  }
   100% {
-    transform: scale(0.3);
-    opacity: 0.3;
+    transform: scale(0.25);
+    opacity: 0.25;
   }
 }
