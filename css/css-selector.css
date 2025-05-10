@@ -40,14 +40,15 @@ h1 {
 
 .css-game {
   margin-top: 90px;
-  aspect-ratio: 1 / 0.6;
+  width: 800px;
+  height: 450px;
 }
 
 img {
   width: 100%;
   height: 100%;
-  margin-bottom: 1rem;
-  border-radius: 0.5rem;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 img:hover {
