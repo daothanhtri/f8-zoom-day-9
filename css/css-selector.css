@@ -1,0 +1,61 @@
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  max-width: 140rem;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.4rem;
+  width: 500px;
+  height: 90px;
+  line-height: 90px;
+  font-weight: 600;
+  display: inline-block;
+  border-radius: 15px;
+  color: aliceblue;
+  background-color: #1f6814;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.css-game {
+  margin-top: 90px;
+  aspect-ratio: 1 / 0.6;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+img:hover {
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+
+p {
+  font-size: 2.4rem;
+  margin-top: 20px;
+  font-weight: 500;
+}
